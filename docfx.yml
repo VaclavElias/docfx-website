@@ -1,0 +1,4 @@
+template: ../template
+globalMetadata:
+  titleSuffix: My Awesome Website
+  menu_path: "/toc.json"
