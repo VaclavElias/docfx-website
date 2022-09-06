@@ -5,6 +5,42 @@ layout: Default.html
 
 <p>Velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget sem nulla eu ultricies orci praesent id augue nec lorem pretium congue sit amet ac nunc fusce iaculis lorem eu diam hendrerit at mattis purus dignissim vivamus mauris tellus, fringilla vel dapibus a, blandit quis erat vivamus elementum aliquam luctus etiam fringilla pretium sem vitae sodales mauris id nulla est praesent laoreet, metus vel auctor aliquam, eros purus vulputate leo, eget consequat neque quam id tellus duis ultricies tempor tortor, vitae dignissim ligula mattis nec in hac habitasse platea dictumst.</p>
 
+## This file Header
+```
+---
+title: Html Example Page
+layout: Default.html
+---
+```
+
 <p class="alert alert-warning">
     This html content (in this box) is from <strong>html-page.html</strong> file. This loads <strong>Default.html</strong> layout (referenced in the file header). This only works with experimental docfx v3 which allows to load <strong>*.html</strong> files as content but also we can have <strong>*.html</strong> layouts. <span class="badge bg-danger">Experimental</span>
 </p>
+
+## Include Examples
+
+The cards below are using include `card.html` and are defined in this file. `card.html` is in the `include` folder and can be shared with the layout. <span class="badge bg-danger">Experimental</span>
+
+{% raw %}
+```
+<div class="row g-3">
+    {% include card.html cardTitle: 'Title 1', style: 'light' %}
+    {% include card.html cardTitle: 'Title 2', style: 'primary' %}
+    {% include card.html cardTitle: 'Title 3', style: 'warning' %}
+    {% include card.html cardTitle: 'Title 4', style: 'success' %}
+    {% include card.html cardTitle: 'Title 5', style: 'info' %}
+    {% include card.html cardTitle: 'Title 6', style: 'danger' %}
+</div>
+```
+{% endraw %}
+
+### Result
+These below are rendered as cards.
+<div class="row g-3">
+    {% include card.html cardTitle: 'Title 1', style: 'light' %}
+    {% include card.html cardTitle: 'Title 2', style: 'primary' %}
+    {% include card.html cardTitle: 'Title 3', style: 'warning' %}
+    {% include card.html cardTitle: 'Title 4', style: 'success' %}
+    {% include card.html cardTitle: 'Title 5', style: 'info' %}
+    {% include card.html cardTitle: 'Title 6', style: 'danger' %}
+</div>
