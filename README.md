@@ -8,7 +8,7 @@ Example website for docfx v3 which is using docfx-jekyll branch updates.
 - ✅ Allow html layouts
 - ✅ Allow html includes
 - ✅ Render liquid syntax in markdown and html pages
-- ⌛ ToDo: Add Blog page and list posts
+- ✅ ToDo: Add Blog page and list posts
 - ⌛ ToDo: Add Paginator
 
 ## How to install
