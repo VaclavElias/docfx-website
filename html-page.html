@@ -19,28 +19,44 @@ layout: Default.html
 
 ## Include Examples
 
-The cards below are using include `card.html` and are defined in this file. `card.html` is in the `include` folder and can be shared with the layout. <span class="badge bg-danger">Experimental</span>
+The cards below are using include `card.html`. `card.html` is in the `include` folder and can be shared with the layout. <span class="badge bg-danger">Experimental</span>
 
 {% raw %}
 ```
 <div class="row g-3">
-    {% include card.html cardTitle: 'Title 1', style: 'light' %}
-    {% include card.html cardTitle: 'Title 2', style: 'primary' %}
-    {% include card.html cardTitle: 'Title 3', style: 'warning' %}
-    {% include card.html cardTitle: 'Title 4', style: 'success' %}
-    {% include card.html cardTitle: 'Title 5', style: 'info' %}
-    {% include card.html cardTitle: 'Title 6', style: 'danger' %}
+    {% include card.html cardTitle: 'Title 1', column: '4', style: 'light' %}
+    {% include card.html cardTitle: 'Title 2', column: '4', style: 'primary' %}
+    {% include card.html cardTitle: 'Title 3', column: '4', style: 'warning' %}
+    {% include card.html cardTitle: 'Title 4', column: '4', style: 'success' %}
+    {% include card.html cardTitle: 'Title 5', column: '4', style: 'info' %}
+    {% include card.html cardTitle: 'Title 6', column: '4', style: 'danger', text: 'What danger?' %}
 </div>
 ```
 {% endraw %}
 
+### card.html
+
+{% raw %}
+```
+<div class="col-{{ column | default:'12' }}">
+    <div class="card bg-{{ style }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ cardTitle }}</h5>
+            <p>{{ text }}</p>
+        </div>
+    </div>
+</div>
+
+```
+{% endraw %}
+
 ### Result
-These below are rendered as cards.
+These cards below are rendered from the above code.
 <div class="row g-3">
-    {% include card.html cardTitle: 'Title 1', style: 'light' %}
-    {% include card.html cardTitle: 'Title 2', style: 'primary' %}
-    {% include card.html cardTitle: 'Title 3', style: 'warning' %}
-    {% include card.html cardTitle: 'Title 4', style: 'success' %}
-    {% include card.html cardTitle: 'Title 5', style: 'info' %}
-    {% include card.html cardTitle: 'Title 6', style: 'danger' %}
+    {% include card.html cardTitle: 'Title 1', column: '4', style: 'light' %}
+    {% include card.html cardTitle: 'Title 2', column: '4', style: 'primary' %}
+    {% include card.html cardTitle: 'Title 3', column: '4', style: 'warning' %}
+    {% include card.html cardTitle: 'Title 4', column: '4', style: 'success' %}
+    {% include card.html cardTitle: 'Title 5', column: '4', style: 'info' %}
+    {% include card.html cardTitle: 'Title 6', column: '4', style: 'danger', text: 'What danger?' %}
 </div>
