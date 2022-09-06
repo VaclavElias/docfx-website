@@ -1,0 +1,18 @@
+---
+layout: Default.html
+title: Blog
+---
+<div class="row g-3">
+    {% for post in page.site.pages %}
+    <div class="col-12">
+        <div class="card bg-light">
+            <div class="card-body">
+                <p class="fw-bold">{{ post.title }}</p>
+                <p>{{ post.excerpt }}</p>
+                <p><a href="{{ post.url }}">Read more here {{ post.url }}</a></p>
+                {% include tags.html tags: post.tags %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
