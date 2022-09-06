@@ -27,9 +27,9 @@ Example website for docfx v3 which is using docfx-jekyll branch updates.
 
 ## How to use
 
-Make any updates you would like. Build with ```docfx build``` and test with ```docfx serve```.
+Make any updates you would like. Build with `docfx build` and test with `docfx serve`.
 
-You might need to use whole path to docfx.exe if needed.
+You might need to use whole path to `docfx.exe` if needed.
 
 
 
