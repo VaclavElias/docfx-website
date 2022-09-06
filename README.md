@@ -13,7 +13,7 @@ Example website for docfx v3 which is using docfx-jekyll branch updates.
 
 ## How to install
 
-1. Clone **docfx v3** experimental branch from https://github.com/VaclavElias/docfx/tree/jekyll or https://github.com/VaclavElias/docfx/tree/jekyll-global-pages 
+1. Clone **docfx v3** experimental branch from https://github.com/VaclavElias/docfx/tree/jekyll
     - Compare with upstream https://github.com/dotnet/docfx/compare/v3...VaclavElias:jekyll?expand=1
     - Change the build location in the ```docfx.csproj```, currently it is in ```D:\docfx``` for the testing purpose
     - Build the project
