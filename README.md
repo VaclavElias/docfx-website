@@ -32,5 +32,11 @@ Make any updates you would like. Build with ```docfx build``` and test with ```d
 You might need to use whole path to docfx.exe if needed.
 
 
-
+## Summary
+||docfx v3 branch| docfx v3 jekyll branch|
+|---|
+|Layout|*.liquid|*.liquid<br> *.html
+|Includes|*.liquid|*.liquid<br> *.html
+|Page|*.md<br> *.yml|*.md (+ liquid content)<br> *.html (+ liquid content)<br> *.yml
+|Blog|not available|/blog/index.html access to all pages `page.site.pages`
 
