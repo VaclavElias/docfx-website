@@ -1,4 +1,8 @@
 template: ../template
+exclude: [
+    "README.md",
+]
 globalMetadata:
   titleSuffix: My Awesome Website
   menu_path: "/toc.json"
+  _blogUrl: "/blog/"

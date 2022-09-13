@@ -8,4 +8,8 @@ tags: .NET docfx Tutorials
 
 These tags are here but could be rendered also in the layout.
 
-{% include tags.html tags: page.tags %}
+{{ page.tags }}
+
+{% assign tagItems = page.tags | split: ' ' %}
+
+{% include tags.html tags: tagItems %}

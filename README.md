@@ -39,5 +39,5 @@ You might need to use whole path to `docfx.exe` if needed.
 |Layout|*.liquid|*.liquid<br> *.html
 |Includes|*.liquid|*.liquid<br> *.html
 |Page|*.md<br> *.yml|*.md (+ liquid content)<br> *.html (+ liquid content)<br> *.yml
-|Blog|not available|/blog/index.html access to all pages `page.site.pages`
+|Blog|not available|/blog/index.html access to all pages `site.pages` and posts `site.posts`
 
