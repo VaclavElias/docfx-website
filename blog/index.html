@@ -15,4 +15,17 @@ title: Blog
         </div>
     </div>
     {% endfor %}
+    <h2>Paginator</h2>
+    {% for post in site.paginator.posts %}
+    <div class="col-12">
+        <div class="card bg-light">
+            <div class="card-body">
+                <p class="fw-bold">{{ post.title }}</p>
+                <p>{{ post.excerpt }}</p>
+                <p><a href="{{ post.url }}">Read more here {{ post.url }}</a></p>
+                {% include tags.html tags: post.tags %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 </div>
