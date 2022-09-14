@@ -5,5 +5,5 @@ exclude: [
 globalMetadata:
   titleSuffix: My Awesome Website
   menu_path: "/toc.json"
-  _blogUrl: "/blog/"
+  _blogUrl: "/blog"
   _paginate: 2
