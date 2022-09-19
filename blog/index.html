@@ -16,7 +16,7 @@ title: Blog
     </div>
     {% endfor %}
     <h2>Paginator</h2>
-    {% for post in site.paginator.posts %}
+    {% for post in paginator.posts %}
     <div class="col-12">
         <div class="card bg-light">
             <div class="card-body">
@@ -28,4 +28,5 @@ title: Blog
         </div>
     </div>
     {% endfor %}
+    <p><a href="{{ paginator.next_page_path }}">Next Page</a></p>
 </div>

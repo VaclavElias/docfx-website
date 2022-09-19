@@ -41,3 +41,8 @@ You might need to use whole path to `docfx.exe` if needed.
 |Page|*.md<br> *.yml|*.md (+ liquid content)<br> *.html (+ liquid content)<br> *.yml
 |Blog|not available|/blog/index.html access to all pages `site.pages` and posts `site.posts`
 
+## Changes
+
+- `TemplateEngine.cs`
+  - `ProcessConceptualHtml()` - check if _locale is empty and skip so /en-us/ is not added to the url
+
