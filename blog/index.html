@@ -3,18 +3,18 @@ layout: Default.html
 title: Blog
 ---
 <div class="row g-3">
-    {% for post in site.posts %}
     <div class="col-12">
-        <div class="card bg-light">
+        <div class="card">
             <div class="card-body">
+                <h2>All Posts</h2>
+                {% for post in site.posts %}
                 <p class="fw-bold">{{ post.title }}</p>
                 <p>{{ post.excerpt }}</p>
                 <p><a href="{{ post.url }}">Read more here {{ post.url }}</a></p>
-                {% include tags.html tags: post.tags %}
+                {% endfor %}
             </div>
         </div>
     </div>
-    {% endfor %}
     <h2>Paginator</h2>
     {% for post in paginator.posts %}
     <div class="col-12">
@@ -28,5 +28,19 @@ title: Blog
         </div>
     </div>
     {% endfor %}
-    <p><a href="{{ paginator.next_page_path }}">Next Page</a></p>
+    <p class="d-flex justify-content-between">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">Previous Page</a>
+        {% else %}
+        <span class="previous text-muted">Previous Page</span>
+        {% endif %}
+        <span class="page_number">
+            Page: {{ paginator.page }} of {{ paginator.total_pages }}
+        </span>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">Next Page</a>
+        {% else %}
+        <span class="next text-muted">Next Page</span>
+        {% endif %}
+    </p>
 </div>
