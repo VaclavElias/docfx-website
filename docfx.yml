@@ -1,10 +1,11 @@
-template: ../template
+template: https://github.com/VaclavElias/template.git
+template2: ../template
 defaultLocale: ''
+blogUrl: "/blog/"
+paginate: 2
 exclude: [
     "README.md",
 ]
 globalMetadata:
   titleSuffix: My Awesome Website
   menu_path: "/toc.json"
-  _blogUrl: "/blog"
-  _paginate: 2
