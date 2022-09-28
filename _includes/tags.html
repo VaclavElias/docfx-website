@@ -1,0 +1,6 @@
+<p class="mb-0">
+    {% assign tagItems = tags %}
+    {% for tag in tagItems %}
+    <span class="badge bg-success">{{ tag | replace: "-"," " }}</span>
+    {% endfor %}
+</p>
