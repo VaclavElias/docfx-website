@@ -5,3 +5,18 @@ excerpt: DocFX can produce documentation from source code.
 ---
 <p>DocFX can produce documentation from source code (including C#, F#, Visual Basic, REST, JavaScript, Java, Python and TypeScript) as well as raw Markdown files.</p>
 <p>Previous post <a href="/blog/new-post/">here</a>.</p>
+
+```csharp
+using var game = new Game();
+
+game.Run(start: (Scene rootScene) =>
+{
+    game.SetupBase3DScene();
+
+    var entity = new Entity(new Vector3(1f, 0.5f, 3f));
+
+    entity.Add(new ModelComponent(new CubeProceduralModel().Generate(game.Services)));
+
+    entity.Scene = rootScene;
+});
+```
